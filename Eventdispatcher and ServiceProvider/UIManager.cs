@@ -160,7 +160,7 @@ public class UIManager : MonoBehaviour
         OpenMenu(emotesMenu, toggle: true);
     }
 
-    private void OpenChatMenu(bool toggle = true)
+    public void OpenChatMenu(bool toggle = true)
     {
         OpenMenu(chatMenu, toggle, disableInput: false);
     }

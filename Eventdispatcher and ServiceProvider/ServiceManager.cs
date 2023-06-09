@@ -66,13 +66,4 @@ public class ServiceManager : MonoBehaviour
             Instance = this;
         }
     }
-
-    private void OnDestroy()
-    {
-        ResetServiceManager();
-    }
-    public void ResetServiceManager()
-    {
-        Destroy(gameObject);
-    }
 }

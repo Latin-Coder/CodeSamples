@@ -59,6 +59,7 @@ public class MessageManager : NetworkBehaviour
             ServiceManager.UIManager.TextChatMenu.AddChatButton(textChannelId, textChannelName,
                 ChatChannel.GetCommTypeFromChannelId(textChannelId), ChatChannel.GetMembersFromChannelId(textChannelId), callerId);
             textChannel = ServiceManager.VivoxManager.Channels.GetChannel(textChannelId);
+            if (textChannel == null) return;
         }
 
         string voiceChannelId = textChannel.GetChannelType() + "_voice_" + textChannel.IDWithoutPrefix();
