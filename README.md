@@ -1,8 +1,10 @@
 # Code Samples
 > C# CodeSamples.
-1) Event Dispatcher embedded on a multiplayer project under the mirror framework
-2)Vivox text and voice chats examples
-3)Car race gamemanager and pooling system codesamples
+-Event Dispatcher embedded on a multiplayer project under the mirror framework
+
+-Vivox text and voice chats examples
+
+-Car race gamemanager and pooling system codesamples
 
 
 ## Table of Contents
@@ -18,8 +20,8 @@ Provided clasess:
 Some examples of these events and the messages (structs) that are sent can be found in the "Events" folder.
 2)ServiceManager - It is a design pattern to access instances of the most common managers or services. 
 In this case, this code example is shown since it is a class that is often required by the rest of the cases that are shown in this repository.
-3)UIManager- It is a manager that controls most of our project and shows several examples of use of the EventDispatcher related to the connection of players and the events of establishing calls between them
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+3)UIManager- It is a manager that controls most of our project and shows several examples of use of the EventDispatcher related to the connection of players and the events of establishing calls between them.
+
 
 
 ## Technologies Used
