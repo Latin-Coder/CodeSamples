@@ -1,21 +1,14 @@
 # Code Samples
 > C# CodeSamples.
 1) Event Dispatcher embedded on a multiplayer project under the mirror framework
-2)
-#> Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
+2)Vivox text and voice chats examples
+3)Car race gamemanager and pooling system codesamples
+
 
 ## Table of Contents
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
 * [Features](#features)
-#* [Screenshots](#screenshots)
-#* [Setup](#setup)
-#* [Usage](#usage)
-#* [Project Status](#project-status)
-#* [Room for Improvement](#room-for-improvement)
-#* [Acknowledgements](#acknowledgements)
-#* [Contact](#contact)
-<!-- * [License](#license) -->
 
 
 ## General Information
