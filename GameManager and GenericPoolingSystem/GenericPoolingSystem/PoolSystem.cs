@@ -5,9 +5,31 @@ using UnityEngine;
 
 public class PoolSystem<T>
 
-    where T : MonoBehaviour, IResettable
+    where T : Component, IResettable
 {
     private Stack<T> poolList = new Stack<T>();
+
+    public PoolSystem(int amountToPool, T poolElement)
+    {
+        poolList = new Stack<T>();
+
+        if (poolElement is MonoBehaviour)
+        {
+            for (int i = 0; i < amountToPool; i++)
+            {
+                poolElement = Object.Instantiate(poolElement);
+                poolList.Push(poolElement);
+            }
+        }
+        else
+        {
+            for (int i = 0; i < amountToPool; i++)
+            {
+                poolElement = default;
+                poolList.Push(poolElement);
+            }
+        }
+    }
 
     private T TakeFromPool()
     {
@@ -25,7 +47,10 @@ public class PoolSystem<T>
         T element = TakeFromPool();
         if (element == null)
         {
-            element = Object.Instantiate(prefab, position, rotation, parent);
+            if (prefab is MonoBehaviour)
+                element = Object.Instantiate(prefab, position, rotation, parent);
+            else
+                element = default;
         }
         else
         {
@@ -46,7 +71,7 @@ public class PoolSystem<T>
     {
         foreach (T item in elements)
         {
-            if (item.activeSelf)
+            if (item!= null && item.activeSelf)
             {
                 item.SetActive(false);
                 poolList.Push(item.GetComponent<T>());

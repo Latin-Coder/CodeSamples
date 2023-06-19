@@ -53,10 +53,14 @@ public class GameManager : MonoSingleton<GameManager>
 
     private AudioSource audioSource;
     private Coroutine movementCoroutine;
-    private PoolSystem<Racer> poolingSystem = new();
+    [SerializeField]
+    private int amountToPool;
+    private PoolSystem<Racer> poolingSystem;
 
     private void Awake()
     {
+        Racer racer = racerPrefabList[Random.Range(0, racerPrefabList.Count)];
+        poolingSystem = new(amountToPool, racer);
         audioSource = Camera.main.GetComponent<AudioSource>();
         collisionEventChannel.onCollisionEnterEvent += RefreshCollisionState;
     }
